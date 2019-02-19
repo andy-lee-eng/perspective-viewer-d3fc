@@ -1,0 +1,11 @@
+node_modules
+/build
+
+# npm lock file
+package-lock.json
+
+# Intellij/WebStorm IDE
+/.idea
+
+# Visual Studio Code configuration
+/jsconfig.json

@@ -1,0 +1,39 @@
+{
+  "name": "perspective-viewer-d3fc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jpmorganchase/perspective": "^0.2.12",
+    "@jpmorganchase/perspective-viewer": "^0.2.12",
+    "@jpmorganchase/perspective-viewer-highcharts": "^0.2.12",
+    "@jpmorganchase/perspective-viewer-hypergrid": "^0.2.12",
+    "chroma-js": "^1.3.4",
+    "d3": "^5.7.0",
+    "d3-svg-legend": "^2.25.6",
+    "d3fc": "^14.0.25",
+    "gradient-parser": "0.1.5",
+    "less": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "css-loader": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "less-loader": "^4.1.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
