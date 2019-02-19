@@ -1,8 +1,9 @@
 const path = require("path");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: "./src/js/plugin.js",
+    entry: ["./src/js/plugin.js", "./src/themes/material.dark.less"],
     devtool: "source-map",
     mode: "development",
     node: {
@@ -21,13 +22,30 @@ module.exports = {
             },
             {
                 test: /\.less$/,
+                include: [
+                    path.resolve(__dirname, "src/less")
+                ],
                 use: [
+                    { loader: 'css-loader' },
+                    { loader: 'less-loader' }
+                ]
+            },
+            {
+                test: /\.less$/,
+                include: [
+                    path.resolve(__dirname, "src/themes")
+                ],
+                use: [
+                    { loader: MiniCssExtractPlugin.loader },
                     { loader: 'css-loader' },
                     { loader: 'less-loader' }
                 ]
             }
         ]
     },
+    plugins: [
+        new MiniCssExtractPlugin({ filename: "d3fc.plugin.dark.css" })
+    ],
     optimization: {
         minimizer: [
             new UglifyJSPlugin({
