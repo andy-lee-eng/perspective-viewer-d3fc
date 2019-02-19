@@ -1,11 +1,18 @@
 {
   "name": "perspective-viewer-d3fc",
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "./test/beforeEachSpec.js"
+    ]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -26,10 +33,12 @@
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "css-loader": "^2.1.0",
     "html-loader": "^0.5.5",
+    "jest": "^24.1.0",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
